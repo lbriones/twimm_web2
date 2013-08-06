@@ -21,7 +21,7 @@
         <td><%= link_to user.id, user_path(user) %></td>
         <td><%= user.username %></td>
         <td><%= user.password %></td>
-        <td><%= user.foto %></td>
+        <td><%= image_tag user.foto %></td>
         <td><%= user.nivel_id %></td>
         <td><%= user.estado_id %></td>
         <td><%=l user.created_at %></td>

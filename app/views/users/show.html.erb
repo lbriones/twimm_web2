@@ -9,7 +9,7 @@
   <dt><strong><%= model_class.human_attribute_name(:password) %>:</strong></dt>
   <dd><%= @user.password %></dd>
   <dt><strong><%= model_class.human_attribute_name(:foto) %>:</strong></dt>
-  <dd><%= @user.foto %></dd>
+  <dd><%= image_tag @user.photo_path %></dd>
   <dt><strong><%= model_class.human_attribute_name(:nivel_id) %>:</strong></dt>
   <dd><%= @user.nivel.nombre %></dd>
   <dt><strong><%= model_class.human_attribute_name(:estado_id) %>:</strong></dt>
