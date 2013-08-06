@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  juego_id: 1
+  player1: 1
+  player2: 1
+  winner: 1
+  loser: 1
+  points_involved: 1
+
+two:
+  juego_id: 1
+  player1: 1
+  player2: 1
+  winner: 1
+  loser: 1
+  points_involved: 1

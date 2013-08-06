@@ -1,0 +1,46 @@
+<%- model_class = Logjuego -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:juego_id) %></th>
+      <th><%= model_class.human_attribute_name(:player1) %></th>
+      <th><%= model_class.human_attribute_name(:player2) %></th>
+      <th><%= model_class.human_attribute_name(:winner) %></th>
+      <th><%= model_class.human_attribute_name(:loser) %></th>
+      <th><%= model_class.human_attribute_name(:points_involved) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @logjuegos.each do |logjuego| %>
+      <tr>
+        <td><%= link_to logjuego.id, logjuego_path(logjuego) %></td>
+        <td><%= logjuego.juego_id %></td>
+        <td><%= logjuego.player1 %></td>
+        <td><%= logjuego.player2 %></td>
+        <td><%= logjuego.winner %></td>
+        <td><%= logjuego.loser %></td>
+        <td><%= logjuego.points_involved %></td>
+        <td><%=l logjuego.created_at %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_logjuego_path(logjuego), :class => 'btn btn-mini' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      logjuego_path(logjuego),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_logjuego_path,
+            :class => 'btn btn-primary' %>

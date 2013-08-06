@@ -1,0 +1,2 @@
+module LogjuegosHelper
+end

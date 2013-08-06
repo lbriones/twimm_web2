@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  usuario_id: 1
+  nick: MyString
+  cta_paypal: MyString
+  estado_id: 1
+
+two:
+  usuario_id: 1
+  nick: MyString
+  cta_paypal: MyString
+  estado_id: 1

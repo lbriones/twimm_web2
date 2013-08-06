@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  fromaccount: 1
+  toaccount: 1
+  monto: 9.99
+  status: 1
+  message: MyString
+
+two:
+  fromaccount: 1
+  toaccount: 1
+  monto: 9.99
+  status: 1
+  message: MyString

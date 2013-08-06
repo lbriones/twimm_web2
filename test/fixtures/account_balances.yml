@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  account_id: 1
+  debit: 9.99
+  credit: 9.99
+  value: 9.99
+  motivo_id: 1
+
+two:
+  account_id: 1
+  debit: 9.99
+  credit: 9.99
+  value: 9.99
+  motivo_id: 1

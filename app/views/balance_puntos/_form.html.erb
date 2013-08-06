@@ -1,0 +1,32 @@
+<%= form_for @balance_punto, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :usuario_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :usuario_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :debit, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :debit, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :credit, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :credit, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :motivo_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :motivo_id, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                balance_puntos_path, :class => 'btn' %>
+  </div>
+<% end %>

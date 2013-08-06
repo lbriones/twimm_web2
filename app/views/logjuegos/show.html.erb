@@ -1,0 +1,31 @@
+<%- model_class = Logjuego -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:juego_id) %>:</strong></dt>
+  <dd><%= @logjuego.juego_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:player1) %>:</strong></dt>
+  <dd><%= @logjuego.player1 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:player2) %>:</strong></dt>
+  <dd><%= @logjuego.player2 %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:winner) %>:</strong></dt>
+  <dd><%= @logjuego.winner %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:loser) %>:</strong></dt>
+  <dd><%= @logjuego.loser %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:points_involved) %>:</strong></dt>
+  <dd><%= @logjuego.points_involved %></dd>
+</dl>
+
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              logjuegos_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_logjuego_path(@logjuego), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              logjuego_path(@logjuego),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>

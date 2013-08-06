@@ -1,0 +1,32 @@
+<%= form_for @account, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :usuario_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :usuario_id, :class => 'number_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :nick, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :nick, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cta_paypal, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cta_paypal, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :estado_id, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.number_field :estado_id, :class => 'number_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                accounts_path, :class => 'btn' %>
+  </div>
+<% end %>
